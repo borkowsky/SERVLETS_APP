@@ -109,7 +109,7 @@
     <c:when test="${books.size() > 0}">
       <c:forEach var="bookItem" items="${books}">
         <div class="list_item">
-          <div class="book_info">
+          <a href="${contextPath}/book?id=${bookItem.id}" class="book_info">
             <div class="image">
               <i class="ri-book-line"></i>
             </div>
@@ -122,7 +122,7 @@
                 <c:out value="${bookItem.pages}" />
               </div>
             </div>
-          </div>
+          </a>
           <c:if test="${user.isAdmin()}">
             <div class="actions">
               <a href="${contextPath}/books?action=edit&id=${bookItem.id}" class="action_button">

@@ -17,7 +17,7 @@ h1 {
     @apply text-4xl font-bold my-4;
 }
 form {
-    @apply rounded-lg bg-[#1e1f22] p-4 flex flex-col gap-y-1;
+    @apply rounded-lg bg-[#1e1f22] p-4 flex flex-col gap-y-1 mb-4;
 }
 label {
     @apply text-sm text-zinc-400 mb-2;
@@ -106,5 +106,26 @@ li {
 }
 .form_title {
     @apply text-lg font-bold mb-4 pl-4;
+}
+a.book_info {
+    @apply flex-1 flex;
+}
+.book_info_block {
+    @apply flex gap-x-4;
+}
+.book_info_block > .cover {
+    @apply flex-1 mt-6;
+}
+.book_cover {
+    @apply bg-[#1e1f22] flex items-center justify-center h-72 rounded;
+}
+.book_cover > img {
+    @apply object-cover;
+}
+.book_cover > i {
+    @apply text-6xl leading-none font-bold;
+}
+.book_info_block > .info {
+    @apply flex-[4];
 }
 

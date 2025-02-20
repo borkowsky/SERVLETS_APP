@@ -34,7 +34,6 @@ public abstract class AuthService {
         cookie.setPath("/");
         cookie.setMaxAge(24 * 5 * 60 * 60);
         cookie.setHttpOnly(true);
-        cookie.setSecure(true);
         return cookie;
     }
 }
