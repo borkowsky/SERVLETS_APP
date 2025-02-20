@@ -1,0 +1,11 @@
+[{
+  "id": "36bfa811-a090-489a-a7dd-f6b73fd056f0",
+  "username": "Admin",
+  "password": "$2a$06$us1aM/jCa5e6phKj7PPbUehY3y6K9v1C.LCNFDxIGi9o2.6gzn6Di",
+  "role": "ADMIN"
+}, {
+  "id": "6fcd22cc-a52e-4476-9297-a6e121d1d6e3",
+  "username": "User",
+  "password": "$2a$06$wHHk/tR8i7I6oKQw6eRaHebFxYllVux2Me/FI5cYOux7xlAl9bWf6",
+  "role": "USER"
+}]

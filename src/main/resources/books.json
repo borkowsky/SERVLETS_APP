@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cd72f105-1f59-4657-be38-1d9344fc0133",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "pages": 300
+  },
+  {
+    "id": "ee02c38e-d98b-4392-b903-817d4ff1885b",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "pages": 215
+  },
+  {
+    "id": "f218320b-dcc3-4cea-a36c-8f1ce8c3690b",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "pages": 100
+  },
+  {
+    "id": "ab2ddb49-8d8a-41e7-95f3-66e0d35a32aa",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "year": 1954,
+    "pages": 536
+  },
+  {
+    "id": "df2dd1a9-7d32-4880-a068-d8242358b9da",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "year": 1951,
+    "pages": 156
+  },
+  {
+    "id": "436fe07f-54e2-4b84-88ed-9e90a77f67d0",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "pages": 874
+  },
+  {
+    "id": "a7f01de8-6111-4d0f-afee-d5a1e599513f",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel Garcia Marquez",
+    "year": 1967,
+    "pages": 54
+  }
+]
