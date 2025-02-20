@@ -9,6 +9,6 @@
 
 <h2>Services</h2>
 <ul>
-  <li><code>UserRepository</code> (create, count)</li>
+  <li><code>UserRepository</code> (create)</li>
   <li><code>BookRepository</code> (create, update, delete)</li>
 </ul>
