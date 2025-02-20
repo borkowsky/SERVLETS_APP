@@ -22,7 +22,7 @@ public abstract class AbstractRepository<T> {
         try {
             this.checkSourceFileExists(filename);
         } catch (Exception e) {
-            throw new RuntimeException("Error checking if source file exists", e);
+            throw new RuntimeException("AbstractRepository: Error checking if source file exists", e);
         }
         try (InputStream is = this.getClass().getResourceAsStream("/" + filename)) {
             if (is != null) {
@@ -30,11 +30,11 @@ public abstract class AbstractRepository<T> {
                 Type listType = TypeToken.getParameterized(List.class, cls).getType();
                 return GSON.fromJson(reader, listType);
             } else {
-                throw new SourceNotFoundException(String.format("UserRepository: %s not found",
+                throw new SourceNotFoundException(String.format("AbstractRepository: %s not found",
                         filename));
             }
         } catch (Exception e) {
-            throw new RuntimeException(String.format("Error reading entities from source file: %s, error: %s",
+            throw new RuntimeException(String.format("AbstractRepository: Error reading entities from source file: %s, error: %s",
                     filename,
                     e.getMessage()));
         }
@@ -47,7 +47,7 @@ public abstract class AbstractRepository<T> {
             try (FileWriter fileWriter = new FileWriter(path.toAbsolutePath().toString())) {
                 GSON.toJson(entities, fileWriter);
             } catch (Exception e) {
-                throw new SourceSaveException(String.format("UserRepository: unable to save %s",
+                throw new SourceSaveException(String.format("AbstractRepository: unable to save %s",
                         filename));
             }
         }
@@ -56,7 +56,7 @@ public abstract class AbstractRepository<T> {
     private void checkSourceFileExists(String filename) throws SourceCreateException {
         URL resourceRootPath = this.getClass().getResource("/");
         if (resourceRootPath == null) {
-            throw new SourceCreateException("Source root path is null");
+            throw new SourceCreateException("AbstractRepository: Source root path is null");
         }
         Path path = Paths.get(resourceRootPath.getPath());
         try {
