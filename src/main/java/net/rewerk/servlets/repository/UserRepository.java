@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class UserRepository extends AbstractRepository<User> {
-    private final String FILENAME = "users.json";
+    private final String FILENAME = "db/users.json";
     static UserRepository instance;
     private final List<User> users = new ArrayList<>();
 

@@ -61,7 +61,7 @@ public class UserRepositoryTest {
         Field instance = UserRepository.class.getDeclaredField("instance");
         instance.setAccessible(true);
         instance.set(null, null);
-        URL path = UserRepository.class.getResource("/users.json");
+        URL path = UserRepository.class.getResource("/db/users.json");
         if (path != null) {
             File file = new File(Paths.get(path.getPath()).toString());
             if (file.exists() && file.canWrite()) {

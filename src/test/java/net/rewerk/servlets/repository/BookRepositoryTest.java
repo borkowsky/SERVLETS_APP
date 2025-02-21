@@ -85,7 +85,7 @@ public class BookRepositoryTest {
         Field instance = BookRepository.class.getDeclaredField("instance");
         instance.setAccessible(true);
         instance.set(null, null);
-        URL path = BookRepository.class.getResource("/books.json");
+        URL path = BookRepository.class.getResource("/db/books.json");
         if (path != null) {
             File file = new File(Paths.get(path.getPath()).toString());
             if (file.exists() && file.canWrite()) {

@@ -2,16 +2,18 @@ package net.rewerk.servlets.service;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import net.rewerk.servlets.exception.AuthException;
+import net.rewerk.servlets.util.ConfigLoader;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import java.util.Properties;
 
 public abstract class PasswordService {
-    private static final Integer STRENGTH = 6;
 
     public static String encryptPassword(String password) {
+        Properties config = ConfigLoader.getInstance().getProperties();
         return BCrypt.with(new SecureRandom())
-                .hashToString(STRENGTH, password.toCharArray());
+                .hashToString(Integer.parseInt(config.getProperty("password.strength")), password.toCharArray());
     }
 
     public static boolean verifyPassword(String password, String hashedPassword) throws AuthException {
